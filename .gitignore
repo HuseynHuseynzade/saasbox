@@ -1,0 +1,19 @@
+#db.sqlite3
+venv/
+*.pyc
+*/__pycache__/
+pgdb/
+media/
+messages.log
+uploads
+# Log files
+*.log
+
+# Editor directories and files
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+.idea

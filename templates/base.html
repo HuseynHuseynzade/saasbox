@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags-->
+    <!-- Title-->
+    <title>Saasbox - Bootstrap 5 Multipurpose HTML Template for Saas &amp; Agency</title>
+    <!-- Favicon-->
+    {% include 'paritials/links.html' %}
+  </head>
+  <body>
+    <!-- Preloader-->
+    <div class="preloader" id="preloader">
+      <div class="spinner-grow text-light" role="status"><span class="sr-only">Loading...</span></div>
+    </div>
+    <!-- Header Area-->
+    <header class="header-area header2">
+      <div class="container">
+        <div class="classy-nav-container breakpoint-off">
+          <nav class="classy-navbar navbar2 justify-content-between" id="saasboxNav">
+            <!-- Logo--><a class="nav-brand me-5" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+            <!-- Navbar Toggler-->
+            <div class="classy-navbar-toggler"><span class="navbarToggler"><span></span><span></span><span></span><span></span></span></div>
+            <!-- Menu-->
+            <div class="classy-menu">
+              <!-- close btn-->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+              <!-- Nav Start-->
+              <div class="classynav">
+                <ul id="corenav">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="blog-full.html">Blog Full</a></li>
+                  <li><a href="about-creative.html">About Creative</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Login Button-->
+                <div class="login-btn-area ms-4 mt-4 mt-lg-0"><a class="btn saasbox-btn btn-sm" href="#">Buy Now</a></div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    {% block body_block %}
+    {% endblock %}
+    <!-- Footer Area-->
+    <footer class="footer-area footer2 section-padding-120">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-7">
+            <!-- Copywrite Text-->
+            <div class="footer--content-text">
+              <p class="mb-0">All rights reserved by <a href="#" target="_blank">Designing World</a></p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <!-- Footer Nav-->
+            <div class="footer-nav">
+              <ul class="d-flex">
+                <li><a href="#" target="_blank">Privacy Policy</a></li>
+                <li><a href="#" target="_blank">Terms &amp; Conditions</a></li>
+                <li><a href="#" target="_blank">Get Support</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- All JavaScript Files-->
+    {% include 'paritials/scripts.html' %}
+
+  </body>
+</html>
