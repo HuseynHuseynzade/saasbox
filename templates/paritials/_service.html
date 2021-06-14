@@ -1,0 +1,20 @@
+{% load static %}
+<!-- Service Area-->
+<section class="service-area service3 section-padding-120 bg-gray" id="service">
+    <div class="container">
+        <div class="row g-5 justify-content-center">
+            <!-- Single Service Area-->
+            {% for service in services %}
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <div class="card service-card wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms">
+                        <div class="card-body">
+                            <div class="icon"><i class="{{ service.icon }}"></i></div>
+                            <h4>{{ service.title }}</h4>
+                            <p>{{ service.text}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
