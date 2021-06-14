@@ -7,7 +7,7 @@ from services.models import Service
 
 
 class ServiceView(BaseContext, TemplateView):
-    template_name = 'index.html'
+    template_name = 'service.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()

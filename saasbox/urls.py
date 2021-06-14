@@ -11,6 +11,7 @@ from services.views import ServiceView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
+    path('service', ServiceView.as_view(), name='service'),
 ]
 
 if settings.DEBUG:

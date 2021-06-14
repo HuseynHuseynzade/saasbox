@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_block %}
-{% include 'paritials/_slider.html' %}
-{% include 'paritials/_service.html' %}
+    {% include 'paritials/_slider.html' %}
+    {% with 1 as homepage %}
+        {% include 'paritials/_service.html' %}
+    {% endwith %}
 
     <!-- saasbox Features Area-->
     <div class="saasbox-tab-area section-padding-120">

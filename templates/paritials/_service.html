@@ -9,12 +9,23 @@
                     <div class="card service-card wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms">
                         <div class="card-body">
                             <div class="icon"><i class="{{ service.icon }}"></i></div>
+                            {#                                {% if forloop.counter|divisibleby:2 %}#}
+                            {#                                    cut ({{ forloop.counter }})#}
+                            {#                                {% else %}#}
+                            {#                                    tek({{ forloop.counter }})#}
+                            {#                                {% endif %}#}
                             <h4>{{ service.title }}</h4>
-                            <p>{{ service.text}}</p>
+                            <p>{{ service.text }}</p>
                         </div>
                     </div>
                 </div>
             {% endfor %}
+            {% if homepage == 1 %}
+                <div class="col-12 text-center">
+                    <div class="login-btn-area"><a class="btn saasbox-btn btn-sm px-5"
+                                                                     href="{% url 'service' %}">View all</a></div>
+                </div>git
+            {% endif %}
         </div>
     </div>
 </section>

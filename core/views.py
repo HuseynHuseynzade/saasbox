@@ -18,7 +18,7 @@ class IndexView(BaseContext, TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
         sliders = Slider.objects.all().order_by('order')
-        services = Service.objects.all().order_by('order')[:3]
+        services = Service.objects.filter(chk=True).order_by('order')[:3]
 
         context.update({'sliders': sliders, 'services': services})
         return context
