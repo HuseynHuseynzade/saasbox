@@ -22,3 +22,15 @@ class Slider(BaseModel):
 
     def __str__(self):
         return f"{self.heading}"
+
+
+class Feature(BaseModel):
+    title = models.CharField(max_length=255, null=True, blank=True)
+    heading = models.CharField(max_length=255, null=True, blank=True)
+    description = models.CharField(max_length=255, null=True, blank=True)
+    percent_desc = models.CharField(max_length=255, null=True, blank=True)
+    percent = models.IntegerField()
+    order = models.IntegerField(default=999)
+
+    def __str__(self):
+        return f"{self.title}"

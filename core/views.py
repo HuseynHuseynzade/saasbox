@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.views.generic.base import ContextMixin, TemplateView
 from services.models import Service
-from core.models import Slider
+from core.models import Slider, Feature
 
 
 class BaseContext(ContextMixin):
@@ -21,4 +21,16 @@ class IndexView(BaseContext, TemplateView):
         services = Service.objects.filter(chk=True).order_by('order')[:3]
 
         context.update({'sliders': sliders, 'services': services})
+        return context
+
+
+class FeatureView(BaseContext, TemplateView):
+    template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data()
+        features = Feature.objects.all().order_by('order')
+        # features = Service.objects.filter(chk=True).order_by('order')[:3]
+
+        context.update({'features': features, })
         return context

@@ -15,3 +15,5 @@ class ServiceView(BaseContext, TemplateView):
 
         context.update({'services': services})
         return context
+
+
