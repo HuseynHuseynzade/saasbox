@@ -1,4 +1,6 @@
 from django.db import models
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
 
 
 # Create your models here.
@@ -31,6 +33,17 @@ class Feature(BaseModel):
     percent_desc = models.CharField(max_length=255, null=True, blank=True)
     percent = models.IntegerField()
     order = models.IntegerField(default=999)
+    image = models.ImageField(blank=True, upload_to='uploads')
+    image_thumbnail = ImageSpecField(source='image',
+                                     processors=[ResizeToFill(500, 350)],
+                                     format='JPEG',
+                                     options={'quality': 60})
+
+    def get_image(self):
+        if self.image_thumbnail:
+            return self.image_thumbnail.url
+        else:
+            return 'static/no_img.png'
 
     def __str__(self):
         return f"{self.title}"

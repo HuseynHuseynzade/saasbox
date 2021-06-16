@@ -19,18 +19,8 @@ class IndexView(BaseContext, TemplateView):
         context = super().get_context_data()
         sliders = Slider.objects.all().order_by('order')
         services = Service.objects.filter(chk=True).order_by('order')[:3]
+        features = Feature.objects.all().order_by('order')[:3]
 
-        context.update({'sliders': sliders, 'services': services})
+        context.update({'sliders': sliders, 'services': services, 'features': features})
         return context
 
-
-class FeatureView(BaseContext, TemplateView):
-    template_name = 'index.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data()
-        features = Feature.objects.all().order_by('order')
-        # features = Service.objects.filter(chk=True).order_by('order')[:3]
-
-        context.update({'features': features, })
-        return context
