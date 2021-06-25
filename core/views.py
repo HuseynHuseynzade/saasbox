@@ -23,4 +23,3 @@ class IndexView(BaseContext, TemplateView):
 
         context.update({'sliders': sliders, 'services': services, 'features': features})
         return context
-

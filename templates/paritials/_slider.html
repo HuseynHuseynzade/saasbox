@@ -1,10 +1,10 @@
 {% load static %}
 <!-- Welcome Area-->
 <section class="welcome-area hero4" id="home">
-      <!-- Hero Background Shape-->
-      <div class="hero4-bg-shape"><img src="{% static 'img/core-img/hero-4.png' %}" alt=""></div>
-      <!-- Hero Background Shape-->
-      <div class="hero4-bg-shape2"><img src="{% static 'img/core-img/hero-4-2.png' %}" alt=""></div>
+    <!-- Hero Background Shape-->
+    <div class="hero4-bg-shape"><img src="{% static 'img/core-img/hero-4.png' %}" alt=""></div>
+    <!-- Hero Background Shape-->
+    <div class="hero4-bg-shape2"><img src="{% static 'img/core-img/hero-4-2.png' %}" alt=""></div>
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12 col-md-6">
@@ -17,7 +17,8 @@
                               data-delay="300ms">{{ slider.heading }} {{ slider.order }}</span>
                             <h2 data-animation="fadeInUp" data-delay="500ms">{{ slider.title }}</h2>
                             <p class="mb-4" data-animation="fadeInUp" data-delay="750ms">{{ slider.sub_title }}</p><a
-                                class="btn saasbox-btn white-btn me-3 mt-3" href="{{  slider.button_url }}" data-animation="fadeInUp"
+                                class="btn saasbox-btn white-btn me-3 mt-3" href="{{ slider.button_url }}"
+                                data-animation="fadeInUp"
                                 data-delay="1000ms">{{ slider.button_text }}</a>
                         </div>
                     {% endfor %}
