@@ -5,7 +5,7 @@ from services.models import Service
 
 
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'order', 'chk')
+    list_display = ('title','text', 'order', 'chk')
     list_editable = ('order', 'chk')
 
 
