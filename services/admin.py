@@ -8,5 +8,5 @@ class ServiceAdmin(admin.ModelAdmin):
     list_display = ('title','text', 'order', 'chk')
     list_editable = ('order', 'chk')
 
-
+#admin
 admin.site.register(Service, ServiceAdmin)
